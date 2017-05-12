@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+<center><div style="color: teal; font-size: 20px;font-family:AR BLANCA">
+<form>
+<table>
+<tr>
+<td>USERNAME</td>
+
+<td><input type="text" class="w3-input" ng-model="user.username" disabled></td>
+</tr>
+<tr>
+<td>FIRSTNAME</td>
+
+<td><input type="text" class="w3-input" ng-model="user.firstname"></td>
+</tr>
+
+<tr>
+<td>LASTNAME</td>
+
+<td><input type="text" class="w3-input" ng-model="user.lastname"></td>
+</tr>
+
+<tr>
+<td>PASSWORD</td>
+
+<td><input type="password" class="w3-input" ng-model="user.password"></td>
+</tr>
+
+
+<tr>
+<td>EMAIL</td>
+
+<td><input type="text" class="w3-input" ng-model="user.email"></td>
+</tr>
+
+<tr>
+<td>ROLE</td>
+
+<td><input type="radio" ng-model="user.role" value="Student">STUDENT
+<input type="radio" ng-model="user.role" value="Alumini">ALUMINI
+<input type="radio" ng-model="user.role" value="Employee">EMPLOYEE
+
+</td>
+</tr>
+<tr>
+<td></td>
+<td><input type="submit" ng-click="updateUser()" value="Edit"></td>
+</tr>
+
+</table>
+
+</form></center></div>
+</body>
+</html>

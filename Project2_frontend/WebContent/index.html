@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+   
+  <!--  
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+     
+  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+<link
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+	rel="stylesheet" />
+-->
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+<title>Insert title here</title>
+</head>
+<body ng-app="app"><div style="color: teal; font-size: 20px;font-family:AR BLANCA">
+<header>
+            <nav class="navbar navbar-inverse">
+            
+           <div class="container-fluid">
+		<button type="button" class="navbar-toggle collapsed" 
+   data-toggle="collapse" data-target="#collapse-example" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">WELCOME</a>
+                </div>
+<div class="collapse navbar-collapse" id="collapse-example">
+                <ul class="nav navbar-nav ">
+                    <li><a href="#home"><i class="fa fa-home"></i> HOME</a></li>
+                    <!-- <li><a href=""><i class="fa fa-shield"></i> ABOUT US</a></li> -->
+                    <li><a href="#register" ng-hide="currentUser.username">REGISTER</a></li>
+                    <li><a href="#login" ng-hide="currentUser.username">SIGNIN</a>
+                    <li><a href="" ng-show="currentUser.username">Welcome {{currentUser.username}}</a>
+                    <li><a href="#profilepic" ng-show="currentUser.username"><img src="http://localhost:9090/Proj2_backend/getimage/{{currentUser.username}}" alt="upload Picture" width="30px" height="30px" class="img-rounded"></a></li>
+                    <li><a href="#edituser" ng-show="currentUser.username"><span class="glyphicon glyphicon-user"></span>EDIT PROFILE</a></li>
+                   
+                   
+                   <li class="dropdown"><a href="" class="dropdown-toggle"
+						data-toggle="dropdown" ng-show="currentUser.username"> JOB DETAILS<b
+							class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/getAllJobs"> VIEW JOB</a></li>
+							<li><a href="#/addJob" ng-show="currentUser.role=='Admin'">POST
+									JOB</a></li>
+						</ul></li>
+                 
+                 <!--  
+                    <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+                    Job Details<span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a href="">View Job</a></li>
+                    <li><a href="">Post New Job</a></li>
+                    </ul>                    
+                    </li>
+                    -->
+                    <!--  
+                   <li><a href="#getAllJobs" ng-show="currentUser.username">Get All Jobs</a></li>
+                   <li><a href="#addJob" ng-show="currentUser.role=='Admin'">Post new job</a></li>
+                   -->
+                   <li class="dropdown"><a href="" class="dropdown-toggle"
+						data-toggle="dropdown" ng-show="currentUser.username">BLOG <b
+							class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/getAllBlogs">VIEW ALL BLOGS</a></li>
+							<li><a href="#addPost">POST
+									BLOG</a></li>
+						</ul></li>
+						
+				<li class="dropdown"><a href="" class="dropdown-toggle"
+						data-toggle="dropdown" ng-show="currentUser.username"> FRIEND  <b
+							class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/getAllUsers">VIEW ALL USERS</a></li>
+							<li><a href="#pendingRequests">PENDING REQUEST</a></li>
+							<li><a href="#friendlist">FRIEND LIST</a></li>
+						</ul></li>		
+						
+						
+                   <!--  
+                  <li><a href="#addPost" ng-show="currentUser.username">Add Blog Post </a></li>
+                  <li><a href="#getAllBlogs" ng-show="currentUser.username">View All Blogs</a></li>-->
+                    <li><a href="" ng-click="logout()" ng-show="currentUser.username">LOGOUT</a></li>
+                    
+                </ul>
+            </div>
+            </div>
+            
+            </nav>
+        </header>
+       <div ng-view></div> 
+       
+</body>
+ 
+      
+<!-- Angular JS module -->
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+<!--  Angular JS ngRoute -->
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+	<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-cookies.js"></script>
+<!-- BootStrap -->
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+<script type="text/javascript"
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	  
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css">
+     
+
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="_user/usercontroller.js"></script>
+<script type="text/javascript" src="_user/userservice.js"></script>
+<script type="text/javascript" src="_user/editcontroller.js"></script>
+
+<script type="text/javascript" src="_job/jobcontroller.js"></script>
+<script type="text/javascript" src="_job/jobservice.js"></script>
+
+<script type="text/javascript" src="_blog/blogcontroller.js"></script>
+<script type="text/javascript" src="_blog/blogservice.js"></script>
+<script type="text/javascript" src="_blog/blogdetailcontroller.js"></script>
+<script type="text/javascript" src="_friend/friendcontroller.js"></script>
+<script type="text/javascript" src="_friend/friendservice.js"></script>
+</html>

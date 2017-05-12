@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<title>Insert title here</title>
+</head>
+<body><center><div style="color: teal; font-size: 20px;font-family:AR BLANCA">
+<form>
+<table>
+<tr>
+<td>Job Title</td>
+<td><input type="text" class="w3-input" ng-model="job.jobTitle"></td>
+</tr>
+
+<tr>
+<td>Job Description</td>
+<td><textarea class="w3-input" ng-model="job.jobDescription"></textarea></td>
+</tr>
+
+<tr>
+<td>Location</td>
+<td><input type="text" class="w3-input" ng-model="job.location"></td>
+</tr>
+
+
+<tr>
+<td>Years Of Experience</td>
+<td><input type="text" class="w3-input" ng-model="job.yrsOfExp"></td>
+</tr>
+
+<tr>
+<td>Company</td>
+<td><input type="text" class="w3-input" ng-model="job.company"></td>
+</tr>
+
+<tr>
+<td>Skills Required</td>
+<td><input type="text" class="w3-input" ng-model="job.skillsRequired"></td>
+</tr>
+<tr>
+<td></td>
+<td><input type="submit" class="w3-input" ng-click="saveJob()"></td>
+</tr>
+
+
+</table>
+
+</form></div></center>
+<b>{{errorMessage}}</b>
+</body>
+</html>
