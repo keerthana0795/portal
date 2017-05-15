@@ -23,5 +23,4 @@
 	    return {
 	      stompClient: stompClient
 	    };
-	});
-*/
+	});*/
