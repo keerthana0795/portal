@@ -5,9 +5,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div class="w3-container w3-center w3-animate-zoom">
 <ul ng-repeat="friend in friendslist">
 <li ng-hide="friend.from==currentUser.username">{{friend.from}}</li>
 <li ng-hide="friend.to==currentUser.username">{{friend.to}}</li>
-</ul>
+</ul></div>
 </body>
 </html>

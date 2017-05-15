@@ -5,6 +5,7 @@
 <title>Insert title here</title>
 </head>
 <body><center><div style="color: teal; font-size: 20px;font-family:AR BLANCA">
+<div class="w3-container w3-center w3-animate-zoom">
 <table>
 <tr ng-repeat="job in jobs">
 
@@ -21,7 +22,7 @@
 <b>Posted On</b>{{job.postedOn | date:'yyyy:MM:dd'}}<br>
 <b>Skills Required</b>{{job.skillsRequired}}<br>
 <b ng-show="currentUser.role=='Admin'">Active</b>{{job.active}}<br>
-</div>
+</div></div>
 <a href="#home">Home Page</a></center>
 </body>
 </html>

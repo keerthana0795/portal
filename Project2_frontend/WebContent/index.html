@@ -3,7 +3,7 @@
 <head>
 <meta charset="ISO-8859-1">
    
-  <!-- 
+  
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
      
@@ -12,7 +12,8 @@
 <link
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
 	rel="stylesheet" /> 
- -->
+
+                           <!-- w3school templates -->
  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
 <title>Insert title here</title>
 </head>
@@ -41,54 +42,31 @@
                     <li><a href="#profilepic" ng-show="currentUser.username"><img src="http://localhost:9090/Proj2_backend/getimage/{{currentUser.username}}" alt="upload Picture" width="30px" height="30px" class="img-rounded"></a></li>
                     <li><a href="#edituser" ng-show="currentUser.username"><span class="glyphicon glyphicon-user"></span>EDIT PROFILE</a></li>
                    
-                   
-                   <li class="dropdown"><a href="" class="dropdown-toggle"
-						data-toggle="dropdown" ng-show="currentUser.username"> JOB DETAILS<b
-							class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="#/getAllJobs"> VIEW JOB</a></li>
-							<li><a href="#/addJob" ng-show="currentUser.role=='Admin'">POST
-									JOB</a></li>
-						</ul></li>
+                   <li class="w3-dropdown-hover"><a ng-show="currentUser.username">JOB DETAILS</a>
+					<ul class="w3-dropdown-content w3-bar-block w3-border w3-animate-zoom">
+						<a href="#/getAllJobs" class="w3-bar-item w3-button">VIEW JOB</a>
+						<a href="#/addJob" class="w3-bar-item w3-button" ng-show="currentUser.role=='Admin'">POST JOB</a>
+					</ul>
+				   </li>
                  
-                 <!--  
-                    <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
-                    Job Details<span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                    <li><a href="">View Job</a></li>
-                    <li><a href="">Post New Job</a></li>
-                    </ul>                    
-                    </li>
-                    -->
-                    <!--  
-                   <li><a href="#getAllJobs" ng-show="currentUser.username">Get All Jobs</a></li>
-                   <li><a href="#addJob" ng-show="currentUser.role=='Admin'">Post new job</a></li>
-                   -->
-                   <li class="dropdown"><a href="" class="dropdown-toggle"
-						data-toggle="dropdown" ng-show="currentUser.username">BLOG <b
-							class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="#/getAllBlogs">VIEW ALL BLOGS</a></li>
-							<li><a href="#addPost">POST
-									BLOG</a></li>
-						</ul></li>
+                   <li class="w3-dropdown-hover"><a ng-show="currentUser.username">BLOG</a>
+					<ul class="w3-dropdown-content w3-bar-block w3-border w3-animate-opacity">
+						<a href="#/getAllBlogs" class="w3-bar-item w3-button">LIST OF BLOG</a>
+						<a href="#/addPost" class="w3-bar-item w3-button">POST BLOG</a>
+					</ul>
+				   </li>
 						
-				<li class="dropdown"><a href="" class="dropdown-toggle"
-						data-toggle="dropdown" ng-show="currentUser.username"> FRIEND  <b
-							class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="#/getAllUsers">VIEW ALL USERS</a></li>
-							<li><a href="#pendingRequests">PENDING REQUEST</a></li>
-							<li><a href="#friendlist">FRIEND LIST</a></li>
-						</ul></li>		
+				<li class="w3-dropdown-hover"><a ng-show="currentUser.username">FRIEND</a>
+						<ul class="w3-dropdown-content w3-bar-block w3-border w3-animate-zoom">
+							<a href="#/getAllUsers" class="w3-bar-item w3-button">VIEW USER</a>
+							<a href="#/pendingRequests" class="w3-bar-item w3-button">PENDING REQUEST</a>
+							<a href="#/friendlist" class="w3-bar-item w3-button">FRIENDS</a>
+						</ul>
+					</li>		
 						
-						
-                   <!--  
-                  <li><a href="#addPost" ng-show="currentUser.username">Add Blog Post </a></li>
-                  <li><a href="#getAllBlogs" ng-show="currentUser.username">View All Blogs</a></li>-->
-                    <li><a href="" ng-click="logout()" ng-show="currentUser.username">LOGOUT</a></li>
+                   
+                  <!--  <li><a href="#chat" ng-show="currentUser.username">chat </a></li> -->
+                        <li><a href="" ng-click="logout()" ng-show="currentUser.username">LOGOUT</a></li>
                     
                 </ul>
             </div>
@@ -131,6 +109,17 @@
 <script type="text/javascript" src="_blog/blogcontroller.js"></script>
 <script type="text/javascript" src="_blog/blogservice.js"></script>
 <script type="text/javascript" src="_blog/blogdetailcontroller.js"></script>
+
 <script type="text/javascript" src="_friend/friendcontroller.js"></script>
 <script type="text/javascript" src="_friend/friendservice.js"></script>
+
+<!-- <script src="js/sockjs/sockjs.js"></script>
+    <script src="js/stomp/dist/stomp.js"></script>
+
+
+<script type="text/javascript" src="_chat/chatCtrl.js"></script>
+<script type="text/javascript" src="_chat/chatservice.js"></script>
+ -->
+
+
 </html>
